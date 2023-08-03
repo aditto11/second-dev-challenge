@@ -4,21 +4,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev Challenge</title>
+    <title>Div Challenge</title>
     <style>
         .header {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            color: #000;
+            font-family: PT Serif;
+            font-size: 36px;
+            font-weight: 700;
+            display: flex;
+            padding: 110px 265px 0px 243px;
+            justify-content: space-around;
         }
 
         .header-title {
             color: #000;
             font-family: PT Serif;
-            font-size: 36px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-            letter-spacing: -1.62px;
+        }
+
+        p {
+            color: #000;
+            font-family: Poppins;
+            font-weight: 400;
+            width: 439px;
+        }
+
+        /* image section */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        div {
+            padding-bottom: 20px;
+        }
+
+        img {
+            width: 305.213px;
+            height: 471px;
+            flex-shrink: 0;
+        }
+
+        .first-img {
+            padding: 100px 200px 250px 440px;
+        }
+
+        .low-img {
+            padding: 200px 50px 250px 0px;
+        }
+
+        .last-img {
+            padding: 100px 0px 250px 0px;
+        }
+
+        h2 {
+            padding-left: 100px;
+        }
+
+        @media screen and (max-width:576px) {
+            .header {
+                flex-direction: column;
+                padding: 5px;
+            }
+            .container{
+                grid-template-columns: auto auto;
+                grid-area: 10px;
+                padding: 20px;
+            }
+            div{
+                gap: 10px;
+            }
         }
     </style>
 </head>
@@ -26,24 +80,38 @@
 <body>
     <header class="header">
         <h1 class="header-title">The creative crew</h1>
-        <div class="header-banner">
+        <diV>
             <h3 class="header-title">Who we are</h3>
-            <h5 class="header-description">We are team of creatively diverse. driven. innovative individuals working in
-                various locations from the world.</h5>
-        </div>
+            <p>We are team of creatively diverse. driven. innovative individuals working in various locations from the
+                world.</p>
+        </diV>
     </header>
     <main>
-        <div class="img-one">
-            <img src="photo1.png" alt="">
-            <img src="photo4.png" alt="">
-        </div>
-        <div class="img-two">
-            <img src="photo2.png" alt="">
-            <img src="photo5.png" alt="">
-        </div>
-        <div class="img-three">
-            <img src="photo3.png" alt="">
-            <img src="photo6.png" alt="">
+        <div class="container">
+            <div class="img1">
+                <img src="photo1.png" alt="">
+                <h2>Bill Mahoney</h2>
+            </div>
+            <div class="img2">
+                <img src="photo2.png" alt="">
+                <h2>Art director</h2>
+            </div>
+            <div class="img3">
+                <img src="photo3.png" alt="">
+                <h2>Shae Le</h2>
+            </div>
+            <div class="img4">
+                <img src="photo4.png" alt="">
+                <h2>Skylah Lu</h2>
+            </div>
+            <div class="img5">
+                <img src="photo5.png" alt="">
+                <h2>Griff Richards</h2>
+            </div>
+            <div class="img6">
+                <img src="photo6.png" alt="">
+                <h2>Stan John</h2>
+            </div>
         </div>
     </main>
 </body>
