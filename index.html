@@ -6,72 +6,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Div Challenge</title>
     <style>
-        .header {
-            color: #000;
+        * {
             font-family: PT Serif;
-            font-size: 36px;
-            font-weight: 700;
+        }
+
+        .header {
             display: flex;
-            padding: 110px 265px 0px 243px;
             justify-content: space-around;
+            margin-left: 100px;
+            margin-right: 100px;
         }
 
         .header-title {
             color: #000;
-            font-family: PT Serif;
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-right: 50px;
+        }
+
+        .header-title2 {
+            color: #000;
+            font-size: 18px;
+            font-weight: 600;
         }
 
         p {
             color: #000;
-            font-family: Poppins;
-            font-weight: 400;
             width: 439px;
+            height: 87px;
+            font-size: 25px;
+            font-weight: 400;
         }
 
-        /* image section */
+        figcaption {
+            writing-mode: vertical-lr;
+            position: absolute;
+            padding-left: 200px;
+        }
+
         .container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-        }
-
-        div {
-            padding-bottom: 20px;
+            margin-left: 300px;
         }
 
         img {
-            width: 305.213px;
-            height: 471px;
-            flex-shrink: 0;
+            width: 200px;
+            height: 300px;
         }
 
-        .first-img {
-            padding: 100px 200px 250px 440px;
+        .img2,
+        .img5 {
+            margin-top: 100px;
         }
 
-        .low-img {
-            padding: 200px 50px 250px 0px;
-        }
-
-        .last-img {
-            padding: 100px 0px 250px 0px;
-        }
-
-        h2 {
-            padding-left: 100px;
-        }
 
         @media screen and (max-width:576px) {
             .header {
                 flex-direction: column;
-                padding: 5px;
+                margin-right: 10px;
             }
-            .container{
-                grid-template-columns: auto auto;
-                grid-area: 10px;
-                padding: 20px;
+
+            p {
+                width: 100%;
             }
-            div{
-                gap: 10px;
+
+            .container  {
+                grid-template-columns: repeat(2, 1fr);
+                margin-left: 0;
+                margin-top: 50px;
+            }
+            img{
+                width: 100%;
+            }
+            figcaption{
+                padding-left: 120px;
             }
         }
     </style>
@@ -81,37 +90,43 @@
     <header class="header">
         <h1 class="header-title">The creative crew</h1>
         <diV>
-            <h3 class="header-title">Who we are</h3>
+            <h3 class="header-title2">Who we are</h3>
             <p>We are team of creatively diverse. driven. innovative individuals working in various locations from the
                 world.</p>
         </diV>
     </header>
     <main>
         <div class="container">
-            <div class="img1">
+            <figure class="img1">
+                <figcaption>Product owner</figcaption>
                 <img src="photo1.png" alt="">
                 <h2>Bill Mahoney</h2>
-            </div>
-            <div class="img2">
+            </figure>
+            <figure class="img2">
+                <figcaption>Art director</figcaption>
                 <img src="photo2.png" alt="">
                 <h2>Art director</h2>
-            </div>
-            <div class="img3">
+            </figure>
+            <figure class="img3">
+                <figcaption>Tech Lead</figcaption>
                 <img src="photo3.png" alt="">
                 <h2>Shae Le</h2>
-            </div>
-            <div class="img4">
+            </figure>
+            <figure class="img4">
+                <figcaption>UX Designer</figcaption>
                 <img src="photo4.png" alt="">
                 <h2>Skylah Lu</h2>
-            </div>
-            <div class="img5">
+            </figure>
+            <figure class="img5">
+                <figcaption>Developer</figcaption>
                 <img src="photo5.png" alt="">
                 <h2>Griff Richards</h2>
-            </div>
-            <div class="img6">
+            </figure>
+            <figure class="img6">
+                <figcaption>Developer</figcaption>
                 <img src="photo6.png" alt="">
                 <h2>Stan John</h2>
-            </div>
+            </figure>
         </div>
     </main>
 </body>
